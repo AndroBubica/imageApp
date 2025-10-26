@@ -76,9 +76,7 @@ export function validateEnv(env: NodeJS.ProcessEnv = process.env): EnvConfig {
 
   if (!result.success) {
     const errors = result.error.format();
-    throw new Error(
-      `Environment validation failed:\n${JSON.stringify(errors, null, 2)}`,
-    );
+    throw new Error(`Environment validation failed:\n${JSON.stringify(errors, null, 2)}`);
   }
 
   return result.data;

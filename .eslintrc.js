@@ -20,7 +20,10 @@ module.exports = {
   ],
   rules: {
     // TypeScript specific
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+    ],
     '@typescript-eslint/explicit-function-return-type': ['warn', { allowExpressions: true }],
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-floating-promises': 'error',
@@ -74,5 +77,8 @@ module.exports = {
     '.turbo/',
     '*.config.js',
     '*.config.ts',
+    '.eslintrc.js',
+    '.commitlintrc.js',
+    '.lintstagedrc.js',
   ],
 };

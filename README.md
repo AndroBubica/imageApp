@@ -192,6 +192,7 @@ This project enforces strict code quality standards:
 5. Push and create a pull request
 
 Pre-commit hooks will automatically:
+
 - Lint and format staged files
 - Validate commit message format
 - Run type checks
