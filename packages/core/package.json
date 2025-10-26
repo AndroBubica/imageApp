@@ -1,0 +1,26 @@
+{
+  "name": "@imageapp/core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Core image processing engine using Sharp/libvips",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts --cache",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "test": "jest",
+    "test:ci": "jest --ci --coverage"
+  },
+  "dependencies": {
+    "@imageapp/common": "*",
+    "sharp": "^0.33.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3"
+  }
+}

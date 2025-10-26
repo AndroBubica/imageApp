@@ -1,0 +1,26 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/api"
+    },
+    {
+      "path": "./apps/ui"
+    },
+    {
+      "path": "./packages/common"
+    },
+    {
+      "path": "./packages/config"
+    },
+    {
+      "path": "./packages/core"
+    },
+    {
+      "path": "./packages/presets"
+    },
+    {
+      "path": "./packages/storage"
+    }
+  ]
+}
