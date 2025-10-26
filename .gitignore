@@ -79,3 +79,7 @@ Desktop.ini
 
 # Turborepo
 .turbo
+
+# Documentation (except README.md)
+*.md
+!README.md

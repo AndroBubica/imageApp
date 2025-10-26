@@ -1,6 +1,19 @@
 module.exports = {
-  '*.{ts,tsx}': ['eslint --fix --max-warnings=0', 'prettier --write'],
-  'apps/**/*.{js,jsx}': ['eslint --fix --max-warnings=0', 'prettier --write'],
-  'packages/**/*.{js,jsx}': ['eslint --fix --max-warnings=0', 'prettier --write'],
+  '*.{ts,tsx}': (filenames) =>
+    filenames
+      .filter((f) => !f.endsWith('.config.ts'))
+      .map((f) => `eslint --fix --max-warnings=0 "${f}"`)
+      .concat(filenames.map((f) => `prettier --write "${f}"`)),
+  'apps/**/*.{js,jsx}': (filenames) =>
+    filenames
+      .filter((f) => !f.endsWith('.config.js'))
+      .map((f) => `eslint --fix --max-warnings=0 "${f}"`)
+      .concat(filenames.map((f) => `prettier --write "${f}"`)),
+  'packages/**/*.{js,jsx}': (filenames) =>
+    filenames
+      .filter((f) => !f.endsWith('.config.js'))
+      .map((f) => `eslint --fix --max-warnings=0 "${f}"`)
+      .concat(filenames.map((f) => `prettier --write "${f}"`)),
   '*.{json,md,yml,yaml}': ['prettier --write'],
+  '**/*.config.{js,ts}': ['prettier --write'],
 };
